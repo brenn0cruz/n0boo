@@ -1,0 +1,6 @@
+[
+  {"member_id":"fictional-001","party":"Example A","vote":"yes"},
+  {"member_id":"fictional-002","party":"Example A","vote":"no"},
+  {"member_id":"fictional-003","party":"Example B","vote":"abstain"},
+  {"member_id":"fictional-004","party":"Example B","vote":"yes"}
+]
