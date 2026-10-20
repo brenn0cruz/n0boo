@@ -4,6 +4,11 @@ Building reliable, measurable systems at the intersection of **security engineer
 
 Experience across application support and technology operations; interested in solutions engineering, cybersecurity and technical consulting.
 
+
+## Cybersecurity lab
+
+**[Blue Team Detection Lab](labs/blue-team-detection-lab)** — a local-only, containerized security operations range with synthetic telemetry, a Python detection engine, SQLite, FastAPI, and an interactive dashboard. Includes authentication-burst, simulated port-sweep and suspicious-process alert rules. [Architecture and quick start →](labs/blue-team-detection-lab/README.md)
+
 ## Featured technical portfolio
 
 | Project | Engineering focus | Stack |
