@@ -1,0 +1,31 @@
+name: Python project tests
+on:
+  push:
+    paths:
+      - 'projects/**'
+      - '.github/workflows/python-tests.yml'
+  pull_request:
+    paths:
+      - 'projects/**'
+      - '.github/workflows/python-tests.yml'
+permissions:
+  contents: read
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+        project:
+          - soc-event-correlator
+          - transfer-sla-monitor
+          - civic-vote-analytics
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run unit tests
+        working-directory: projects/${{ matrix.project }}
+        run: python -m unittest discover -s . -p 'test_*.py' -v
